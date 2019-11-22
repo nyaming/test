@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+/*はまれぽCSSのリセット*/
+#contents a{
+	/*display: inline !important;*/
+}
+#contents .hamarepo_body{
+	background-color: #fff;
+	padding:1px 0px;
+	width:100%;
+}
+#division {
+    padding: 0px 0 0 !important;
+}
+/*はまれぽCSS　打ち消しここまで*/
+
+
+/*はまれぽCSS　強制変更*/
+@media screen and (min-width: 768px) {
+	#mainWrap{
+		width: 100% !important;
+	}
+	main{
+	padding: 0px 0 0 !important;
+	background: #f8f9fa !important;
+	}
+	}
+/*はまれぽCSS　強制変更ここまで*/
+
+
+/*top image調整*/
+@media screen and (min-width: 600px) {
+	#contents .main-warp{ width:100%; margin-top:50px !important; }
+	}
+
+@media screen and (min-width: 400px) {
+	#contents .main-warp{ width:100%; margin-top:50px !important; }
+	}
+
+@media screen and (min-width: 300px) {
+	#contents .main-warp{ width:100%; margin-top:50px !important; }
+	}
+/*top image調整ここまで*/
+
+
+/*開始　マルチデバイス用*/
+#contents .top_sp{display:none !important;}
+#contents .top_pc{display:block !important;}
+
+@media screen and (min-width: 600px) {
+	#contents .top_sp{display:block;}
+	#contents .top_pc{display:none;}
+	}
+@media screen and (min-width: 400px) {
+	#contents .top_sp{display:block;}
+	#contents .top_pc{display:none;}
+	}
+@media screen and (min-width: 300px) {
+	#contents .top_sp{display:block;}
+	#contents .top_pc{display:none;}
+	}
+/*終了　マルチデバイス用*/

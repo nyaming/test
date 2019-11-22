@@ -1,0 +1,26 @@
+// ベースカラー
+$color-benefit: #ce003d;
+$color-cream: #fff385;
+$color-lightgray: #eee;
+$color-gray: #a5a5a5;
+
+// MAP category colors 
+$categories: (
+    eat: #FD9809,
+    buy: #FC7068,
+    beauty: #BA79CE,
+    sumu: #A7CD3D,
+    learn: #EE87B4,
+    live: #9A8EE0,
+    play: #67C9D5,
+    hospital: #67D5A6,
+    consult: #4B66D0,
+    health: #FC613A
+);
+
+// MAP breakpoints
+$breakpoints: (
+    'sm': 'screen and (min-width: 481px)', // タブレット
+    'md': 'screen and (min-width: 1000px)', // ラップトップ
+    'lg': 'screen and (min-width: 1240px)', // PC大 左カラム有
+);

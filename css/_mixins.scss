@@ -1,0 +1,34 @@
+@mixin heading {
+    background-color: $color-benefit;
+    margin-bottom: 0!important;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+}
+
+@mixin heading--category {
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    font-size: 16px;
+    width: 96%;
+    margin-right: auto;
+    margin-left: auto;
+    color: #ffffff;
+
+    @include mq() {
+        font-size: 20px;
+    }
+}
+
+@function cats($key) {
+    @return map-get($categories, $key);
+}
+
+@mixin mq ($breakpoint: sm) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}

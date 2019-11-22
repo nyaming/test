@@ -1,0 +1,473 @@
+@charset "UTF-8";
+/*はまれぽCSSのリセット*/
+#contents ul {
+  padding-left: 0px;
+}
+
+#contents .hamarepo_body {
+  background-color: #fff;
+  padding: 1px 0px;
+  width: 100%;
+}
+
+#contents * {
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ol, ul {
+  list-style: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  padding: 0px 0 0 !important;
+  background: #fff !important;
+}
+
+main h1 {
+  margin: 0px 0px !important;
+  padding: 0px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #666;
+  border-bottom: 0px solid #444 !important;
+}
+
+#contents img {
+  max-width: 100%;
+}
+
+/*はまれぽCSS 打ち消しここまで*/
+body {
+  line-height: 1.5;
+}
+
+.main-warp {
+  background-color: #fff8b8;
+}
+
+/* flex */
+.flex, .flex--sa, .flex--sb, .flex--center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flex--sa {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.flex--sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex--center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* font awesome */
+.fas {
+  padding-right: 5px;
+}
+
+@media screen and (min-width: 481px) {
+  .fas {
+    padding-right: 7px;
+  }
+}
+
+/* 特典の使い方はコチラ */
+.benefitHowtoLink {
+  text-align: center;
+  padding: 12px 0;
+}
+
+@media screen and (min-width: 1000px) {
+  .benefitHowtoLink {
+    padding: 20px 0 0;
+  }
+}
+
+.benefitHowtoLink__btn {
+  margin-bottom: 0 !important;
+}
+
+.benefitHowtoLink__btn a {
+  display: inline-block;
+  background-color: #eee;
+  padding: 6px 8px;
+  border: 1px solid #ce003d;
+  letter-spacing: 0.3em;
+  font-weight: bold;
+  font-size: 10px;
+  text-align: center;
+  color: #ce003d;
+}
+
+.benefitHowtoLink__btn a:hover {
+  opacity: inherit !important;
+  background-color: #a5a5a5;
+}
+
+@media screen and (min-width: 481px) {
+  .benefitHowtoLink__btn a {
+    font-size: 14px;
+    padding: 6px 6px;
+    border-width: 2px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .benefitHowtoLink__btn a {
+    font-size: 16px;
+    padding: 10px 12px;
+  }
+}
+
+/* ジャンルから特典を探す */
+.benefitCategories {
+  background-color: #ce003d;
+  border: 2px solid #ce003d;
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 481px) {
+  .benefitCategories {
+    border-width: 3px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .benefitCategories {
+    width: 90%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.benefitCategories__heading {
+  background-color: #ce003d;
+  margin-bottom: 0 !important;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 481px) {
+  .benefitCategories__heading {
+    font-size: 22px;
+  }
+}
+
+.benefitCategories__list {
+  background-color: #fff;
+  padding: 18px 10px 10px !important;
+}
+
+.benefitCategories__item {
+  width: 45%;
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width: 1000px) {
+  .benefitCategories__item {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .benefitCategories__item {
+    width: 23%;
+  }
+}
+
+.benefitCategories__item a {
+  display: block;
+  padding: 2px 0;
+  background-color: #fff385;
+  border-radius: 15px;
+  text-align: center;
+  color: #ce003d;
+  font-weight: bold;
+  border: 3px solid transparent;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 481px) {
+  .benefitCategories__item a {
+    font-size: 16px;
+    padding: 4px 0;
+  }
+}
+
+.benefitCategories__item a:hover {
+  opacity: inherit !important;
+  border: 3px dashed #ce003d;
+}
+
+/* 特典一覧 */
+.benefitContents {
+  padding: 20px 0;
+}
+
+@media screen and (min-width: 1000px) {
+  .benefitContents {
+    margin-top: 80px;
+    padding: 0 0 20px;
+  }
+}
+
+.benefitContents__heading {
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  font-size: 16px;
+  width: 96%;
+  margin-right: auto;
+  margin-left: auto;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 481px) {
+  .benefitContents__heading {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .benefitContents__heading {
+    width: 90%;
+    padding: 8px;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+}
+
+.benefitContents__heading--eat {
+  background-color: #FD9809;
+}
+
+.benefitContents__heading--play {
+  background-color: #67C9D5;
+}
+
+.benefitContents__heading--buy {
+  background-color: #FC7068;
+}
+
+.benefitContents__heading--learn {
+  background-color: #EE87B4;
+}
+
+.benefitContents__heading--beauty {
+  background-color: #BA79CE;
+}
+
+.benefitContents__heading--live {
+  background-color: #9A8EE0;
+}
+
+.benefitContents__heading--sumu {
+  background-color: #A7CD3D;
+}
+
+.benefitContents__heading--hospital {
+  background-color: #67D5A6;
+}
+
+.benefitContents__heading--consult {
+  background-color: #4B66D0;
+}
+
+.benefitContents__heading--health {
+  background-color: #FC613A;
+}
+
+.benefitContents__list {
+  width: 96%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1000px) {
+  .benefitContents__list {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.benefitContents__item {
+  background-color: #eee;
+  width: 49.6%;
+  margin-top: 15px;
+  border: 2px solid #ce003d;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-bottom: 40px;
+}
+
+@media screen and (min-width: 481px) {
+  .benefitContents__item {
+    border-width: 3px;
+  }
+}
+
+.benefitContents__item::before {
+  content: '';
+  display: block;
+  width: 45px;
+  height: 60px;
+  background: url("../image/coupon_flag.png") no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+@media screen and (min-width: 481px) {
+  .benefitContents__item::before {
+    width: 68px;
+    height: 90px;
+  }
+}
+
+.benefitContents__detail {
+  margin: 0 !important;
+  padding: 5px 5px 0 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ce003d;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+@media screen and (min-width: 481px) {
+  .benefitContents__detail {
+    padding: 20px 20px 0 20px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .benefitContents__detail {
+    font-size: 20px;
+  }
+}
+
+.benefitContents__name {
+  color: #a5a5a5;
+  font-size: 10px;
+  font-weight: normal;
+  text-align: center;
+  padding: 2px 0 5px;
+  margin-bottom: 0 !important;
+}
+
+@media screen and (min-width: 481px) {
+  .benefitContents__name {
+    padding: 2px 0 20px;
+    font-size: 14px;
+  }
+}
+
+.benefitContents__btn {
+  margin-bottom: 0px !important;
+  position: absolute;
+  bottom: -0.4px;
+  left: -0.4px;
+  right: -0.4px;
+}
+
+.benefitContents__btn a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  padding: 8px 0;
+  color: #000;
+  background-color: #ce003d;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#F7DE05), color-stop(#DA8E00), color-stop(#EDAC06), color-stop(#F7DE05), color-stop(#ECB802), color-stop(#DAAF08), to(#B67B03));
+  background-image: linear-gradient(to top left, #F7DE05, #DA8E00, #EDAC06, #F7DE05, #ECB802, #DAAF08, #B67B03);
+}
+
+.benefitContents__btn a:hover {
+  color: #ce003d;
+}
+
+@media screen and (min-width: 481px) {
+  .benefitContents__btn a {
+    font-size: 20px;
+  }
+}
+
+.benefitHowto__heading {
+  background-color: #ce003d;
+  margin-bottom: 0 !important;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  background-color: #a5a5a5;
+  color: #ce003d;
+}
+
+/* ページトップ */
+#pageTop {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+  background: #000;
+  opacity: 0.6;
+}
+
+#pageTop a {
+  position: relative;
+  display: block;
+  width: 45px;
+  height: 45px;
+  text-decoration: none;
+}
+
+#pageTop a::after {
+  content: '▲';
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+/*# sourceMappingURL=style.css.map */

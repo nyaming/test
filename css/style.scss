@@ -1,0 +1,424 @@
+@charset "UTF-8";
+/*はまれぽCSSのリセット*/
+#contents ul {
+  padding-left: 0px;
+}
+
+#contents .hamarepo_body {
+  background-color: #fff;
+  padding: 1px 0px;
+  width: 100%;
+}
+
+#contents * {
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ol, ul {
+  list-style: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  padding: 0px 0 0 !important;
+  background: #fff !important;
+}
+
+main h1 {
+  margin: 0px 0px !important;
+  padding: 0px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #666;
+  border-bottom: 0px solid #444 !important;
+}
+
+#contents img {
+  max-width: 100%;
+}
+/*はまれぽCSS 打ち消しここまで*/
+
+@import "variables";
+@import "mixins";
+
+body {
+  line-height: 1.5;
+}
+.main-warp {
+  background-color: lighten($color-cream, 10%);
+}
+
+/* flex */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  &--sa {
+    @extend .flex;
+    justify-content: space-around;
+  }
+  &--sb {
+    @extend .flex;
+    justify-content: space-between;
+  }
+  &--center {
+    @extend .flex;
+    justify-content: center;
+  }
+}
+/* font awesome */
+.fas {
+  padding-right: 5px;
+
+  @include mq() {
+    padding-right: 7px;
+  }
+}
+
+/* 特典の使い方はコチラ */
+.benefitHowtoLink {
+  text-align: center;
+  padding: 12px 0;
+
+  @include mq(md) {
+    padding: 20px 0 0;
+  }
+
+  &__btn {
+    margin-bottom: 0 !important;
+    
+    a {
+      display: inline-block;
+      background-color: $color-lightgray;
+      padding: 6px 8px;
+      border: 1px solid $color-benefit;
+      letter-spacing: 0.3em;
+      font-weight: bold;
+      font-size: 10px;
+      text-align: center;
+      color: $color-benefit;
+
+      &:hover {
+        opacity: inherit !important;
+        background-color: $color-gray;
+      }
+      
+      @include mq() {
+        font-size: 14px;
+        padding: 6px 6px;
+        border-width: 2px;
+      }
+
+      @include mq(md) {
+        font-size: 16px;
+        padding: 10px 12px;
+        
+        // letter-spacing: 0.2em;
+      }
+
+      &:hover {
+        // opacity: inherit !important;
+      }
+
+    }
+  }
+}
+
+/* ジャンルから特典を探す */
+.benefitCategories {
+  background-color: #ce003d;
+  border: 2px solid $color-benefit;
+  margin-top: 15px;
+
+  @include mq() {
+    border-width: 3px;
+  }
+
+  @include mq(md) {
+    width: 90%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__heading {
+    @include heading;
+    @include mq() {
+      font-size: 22px;
+    }
+  }
+
+  &__list {
+    background-color: #fff;
+    padding: 18px 10px 10px !important;
+  }
+  &__item {
+    width: 45%;
+    margin-bottom: 5px;
+
+    @include mq(md) {
+      margin-bottom: 10px;
+    }
+
+    @include mq(md) {
+      width: 23%;
+    }
+    
+    a {
+      display: block;
+      padding: 2px 0;
+      background-color: $color-cream;
+      border-radius: 15px;
+      text-align: center;
+      color: $color-benefit;
+      font-weight: bold;
+      border: 3px solid transparent;
+      font-size: 12px;
+      
+      @include mq() {
+        font-size: 16px;
+        padding: 4px 0;
+      }
+
+      &:hover {
+        opacity: inherit !important;
+        border: 3px dashed $color-benefit;
+      }
+    }
+  }
+}
+
+/* 特典一覧 */
+.benefitContents {
+  padding: 20px 0;
+
+  @include mq(md) {
+    margin-top: 80px;
+    padding: 0 0 20px;
+  }
+
+  // &--eat {
+  //   background-color: lighten(cats(eat), 40%);
+  // }
+  // &--play {
+  //   background-color: lighten(cats(play), 30%);
+  // }
+  // &--buy {
+  //   background-color: lighten(cats(buy), 25%);
+  // }
+  // &--learn {
+  //   background-color: lighten(cats(learn), 20%);
+  // }
+  // &--beauty {
+  //   background-color: lighten(cats(beauty), 30%);
+  // }
+  // &--live {
+  //   background-color: lighten(cats(live), 25%);
+  // }
+  // &--sumu {
+  //   background-color: lighten(cats(sumu), 40%);
+  // }
+  // &--hospital {
+  //   background-color: lighten(cats(hospital), 30%);
+  // }
+  // &--consult {
+  //   background-color: lighten(cats(consult), 40%);
+  // }
+  // &--health {
+  //   background-color: lighten(cats(health), 35%);
+  // }
+
+  &__heading {
+
+    @include heading--category;
+
+    @include mq(md) {
+      width: 90%;
+      padding: 8px;
+      transform: translateY(-20px);
+    }
+
+    &--eat {
+      background-color: cats(eat);
+    }
+    &--play {
+      background-color: cats(play);
+    }
+    &--buy {
+      background-color: cats(buy);
+    }
+    &--learn {
+      background-color: cats(learn);
+    }
+    &--beauty {
+      background-color: cats(beauty);
+    }
+    &--live {
+      background-color: cats(live);
+    }
+    &--sumu {
+      background-color: cats(sumu);
+    }
+    &--hospital {
+      background-color: cats(hospital);
+    }
+    &--consult {
+      background-color: cats(consult);
+    }
+    &--health {
+      background-color: cats(health);
+    }
+  }
+
+  &__list {
+    width: 96%;
+    margin: 0 auto;
+
+    @include mq(md) {
+      width: 80%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  &__item {
+    background-color: #eee;
+    width: 49.6%;
+    margin-top: 15px;
+    border: 2px solid $color-benefit;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    padding-bottom: 40px;
+
+    @include mq() {
+      border-width: 3px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 45px;
+      height: 60px;
+      background: url('../image/coupon_flag.png') no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+  
+      @include mq() {
+        width: 68px;
+        height: 90px;
+      }
+    }
+  }
+
+  &__detail {
+    margin: 0 !important;
+    padding: 5px 5px 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: $color-benefit;
+    text-align: center;
+    letter-spacing: 0.5px;
+
+    @include mq() {
+      padding: 20px 20px 0 20px;
+      font-size: 18px;
+    }
+    
+    @include mq(md) {
+      font-size: 20px;
+    }
+  }
+
+  &__name {
+    color: $color-gray;
+    font-size: 10px;
+    font-weight: normal;
+    text-align: center;
+    padding: 2px 0 5px;
+    margin-bottom: 0 !important;
+
+    @include mq() {
+      padding: 2px 0 20px;
+      font-size: 14px;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 0px !important;
+    position: absolute;
+    bottom: -0.4px;
+    left: -0.4px;
+    right: -0.4px;
+
+    a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: 16px;
+      padding: 8px 0;
+      color: #000;
+      background-color: $color-benefit;
+      font-weight: bold;
+      letter-spacing: 1px;
+      background-image: linear-gradient(to top left, #F7DE05, #DA8E00, #EDAC06, #F7DE05, #ECB802, #DAAF08, #B67B03);
+
+      &:hover {
+        color: $color-benefit;
+      }
+
+      @include mq() {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.benefitHowto {
+  &__heading {
+    @include heading;
+    background-color: $color-gray;
+    color: $color-benefit;
+
+  }
+}
+
+
+/* ページトップ */
+#pageTop {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+  background: #000;
+  opacity: 0.6;
+
+  a {
+    position: relative;
+    display: block;
+    width: 45px;
+    height: 45px;
+    text-decoration: none;
+    
+    &::after {
+      content: '▲';
+      font-size: 14px;
+      font-weight: bold;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      }
+    }
+  }
