@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=d	evice-width,initial-scale=1">
+	<title>【2019-2020最新】神奈川・横浜・みなとみらいイルミネーション特集～近隣のおすすめ飲食店も～ | はまれぽ.com</title>
+	<link rel="canonical" href="https://hamarepo.com/special/illumi/" />
+	<link rel="stylesheet" href="https://hamarepo.com/css_2017/drawer.css">
+	<link rel="stylesheet" href="https://hamarepo.com/css_2017/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script defer src="//hamarepo.com/lib/2column_interface.js"></script>
+
+	<meta name="keywords" content="イルミネーション,神奈川,横浜,みなとみらい" />
+	<meta name="description"
+		content="【2019年～2020年最新版】神奈川・横浜・みなとみらい・川崎・湘南のおすすめイルミネーション＆ライトアップ情報配信中。エリア別にライトアップ日時・アクセス・イベント・周辺施設等を掲載。冬のおでかけ、クリスマスデートにお役立てください。" />
+	<meta property="og:site_name" content="はまれぽ.com" />
+	<meta property="og:title" content="【2019-2020最新】神奈川・横浜・みなとみらいイルミネーション特集～近隣のおすすめ飲食店も～ | はまれぽ.com" />
+	<meta property="og:description"
+		content="【2019年～2020年最新版】神奈川・横浜・みなとみらい・川崎・湘南のおすすめイルミネーション＆ライトアップ情報配信中。エリア別にライトアップ日時・アクセス・イベント・周辺施設等を掲載。冬のおでかけ、クリスマスデートにお役立てください。" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://hamarepo.com/special/illumi" />
+	<meta property="og:image" content="https://hamarepo.com/special/illumi/image/illumination_ogp.png" />
+	<meta property="fb:app_id" content="199591593421006" />
+	<meta content="summary_large_image" name="twitter:card" />
+	<meta content="@hamarepo" name="twitter:site" />
+
+	<!-- Google Analytics -->
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-16475869-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+</head>
+
+<body class="drawer drawer--left drawer--sidebar">
+	<div id="hrp">
+		<header>
+			<div class="header_wrap">
+				<button type="button" class="drawer-toggle drawer-hamburger header_menu_btn"><img
+						src="https://hamarepo.com/img_2017/icon-menu.png" alt="メニューボタン">
+					<p>メニュー</p>
+				</button>
+				<div class="header_login_btn"><a href="https://hamarepo.com/member/menu/menu.php"><img
+							:src='user_icon' />
+						<p>{{str_header_login}}</p>
+					</a></div>
+				<div id="header_search_btn" class="header_search_btn"><img
+						src="https://hamarepo.com/img_2017/icon-search.png" alt="検索ボタン">
+					<p>検索</p>
+				</div>
+				<div class="header-logo"><a href="//hamarepo.com"><img
+							src="https://hamarepo.com/img_2017/hamarepo-logo.png" alt="横浜のキニナル情報が見つかる！ はまれぽ.com"></a>
+				</div>
+				<div id="header_search_box" class="header_search_box">
+					<div id="search_section" class="search_inner">
+						<form id="headSearchForm" name="headSearchForm" method="GET"
+							action="https://hamarepo.com/search.php" enctype="multipart/form-data">
+							<div class="clearfix">
+								<div class="search_input_wrap"><input name="search" id="search" size="20"
+										maxlength="2048" value="" placeholder="検索キーワードを入力" autocomplete="off"
+										type="text"></div>
+								<button id="search_btn" type="submit">検索</button>
+							</div>
+							<div id="site_search_switch" class="search_switch">
+								<label id="kininaru_radio" class="search_label"><input name="search_rdo" value="1"
+										id="search_kininaru" type="radio" checked><span>キニナル記事から探す</span></label>
+								<label id="ichioshi_radio" class="search_label"><input name="search_rdo" value="2"
+										id="search_ichioshi" type="radio"><span>キニナルお店・会社を探す</span></label>
+							</div>
+							<input id="search_post_type" name="post_type" value="ichioshi" type="hidden">
+						</form>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div id="wrapper">
+			<nav class="drawer-nav" role="">
+				<div class="drawer-menu">
+					<div class="drawer-login clearfix" v-if="ranking_name !==''">
+						<div class="drawer-login_l">
+							<img :src='user_icon' alt="{{member_name}}">
+						</div>
+						<div class="drawer-login_r">
+							<p><span class="drawer-login_name">{{member_name}}</span>さん</p>
+							<p class="myranking"><img :src="ranking_icon" alt="{{ranking_name}}" width="30"></p>
+							<div><span><a href="https://hamarepo.com/member/menu/menu.php">マイページ</a></span></div>
+						</div>
+					</div>
+					<div class="drawer-login clearfix" v-else>
+						<div class="drawer-login_l">
+							<img :src='user_icon' alt="ゲスト画像">
+						</div>
+						<div class="drawer-login_r">
+							<p><span class="drawer-login_name">ゲスト</span>さん</p>
+							<div><span><a href="https://hamarepo.com/member/menu/menu.php">ログイン・会員登録</a></span></div>
+						</div>
+					</div>
+					<hr style="margin: 0; display: none;"><!-- ←削除 -->
+					<div id="app"></div>
+				</div>
+				<div class="nav-banner">
+					<ul>
+						<div class="nav-banner">
+							<ul>
+								<li><a href="//hamarepo.com/campaign/fleeplan/"><img
+											src="//hamarepo.com/img_2017/freeplan.png" alt=""></a></li>
+								<li><a href="//hamarepo.com/top.php?genre_id=6?b"><img
+											src="//hamarepo.com/img_2017/hamabito2.jpg" alt=""></a></li>
+								<li><a href="//hamarepo.com/news.php?news_id=448"><img
+											src="//hamarepo.com/img_2017/ad/banner-wanted.jpg" alt=""></a></li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			</nav>
+			<div id="division" class="clearfix single-column">
+				<div id="mainWrap">
+					<!-- メインコンテンツ領域 -->
+					<main id="main">
+						<div id="contents">
+							<link rel="stylesheet" href="./css/style.css?3">
+							<link rel="stylesheet" href="./css/style_sp.css" media="screen and (max-width:1240px)">
+							<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+								integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+								crossorigin="anonymous">
+							<div class="main-warp">
+								<h1 id="top">
+									<img src="./image/main-image_2.jpg" alt="イチオシ！神奈川・横浜のお得な特典付きお店特集 | はまれぽ.com"
+										class="top_pc" />
+								</h1>
+
+								<!-- ジャンルから特典を探す -->
+								<div class="benefitCategories">
+									<h2 class="benefitCategories__heading"><i class="fas fa-search"></i>ジャンルから特典を探す</h2>
+									<ul class="benefitCategories__list flex--sa">
+										<li class="benefitCategories__item"><a href="#eat">食べる</a></li>
+										<li class="benefitCategories__item"><a href="#play">遊ぶ・泊まる</a></li>
+										<li class="benefitCategories__item"><a href="#buy">買う</a></li>
+										<li class="benefitCategories__item"><a href="#learn">学ぶ</a></li>
+										<li class="benefitCategories__item"><a href="#beauty">美容</a></li>
+										<li class="benefitCategories__item"><a href="#live">暮らす</a></li>
+										<li class="benefitCategories__item"><a href="#sumu">住む</a></li>
+										<!-- <li class="benefitCategories__item"><a href="#hospital">病院</a></li> -->
+										<li class="benefitCategories__item"><a href="#consult">相談</a></li>
+										<li class="benefitCategories__item"><a href="#health">健康</a></li>
+									</ul>
+								</div>
+
+								<!-- 特典の使い方ボタンリンク -->
+								<div class="benefitHowtoLink">
+									<p class="benefitHowtoLink__btn">
+										<a href="#benefitHowto"><i class="far fa-hand-point-right"></i>特典の使い方はこちら</a>
+									</p>
+								</div>
+
+								<!-- 特典一覧 -->
+								<div class="main-content">
+
+									<!-- 食べるカテゴリ -->
+									<div class="benefitContents benefitContents--eat">
+										<h3 class="benefitContents__heading benefitContents__heading--eat" id="eat">
+											「食べる」カテゴリの特典一覧
+										</h3>
+
+										<ul class="benefitContents__list flex--sb">
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">6000円コースが500円オフ!
+													</p>
+													<p class="benefitContents__name">焼肉マンボウ</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/107051.html?tag=5"
+															onclick="ga('send','event','tokuten','click','107051',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2019/03/manbou_large.jpg"
+														alt="焼肉マンボウ" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">プロ野球チップス1袋プレゼント!
+													</p>
+													<p class="benefitContents__name">まんてんプロ</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/113388.html?tag=5"
+															onclick="ga('send','event','tokuten','click','113388',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2019/07/mantenpro-main_large.jpg"
+														alt="まんてんプロ" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">「アンティパスト盛り合わせ」を一皿サービス
+													</p>
+													<p class="benefitContents__name">Bocca Grande(ボッカグランデ)</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/115501.html?tag=5"
+															onclick="ga('send','event','tokuten','click','115501',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2019/10/bocca-main_large.jpg"
+														alt="Bocca Grande(ボッカグランデ)" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">ドリンク一杯 or 天ぷら一品サービス
+													</p>
+													<p class="benefitContents__name">東京TEMPLAND(トーキョーテンプランド)</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/108959.html?tag=5"
+															onclick="ga('send','event','tokuten','click','108959',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2019/04/large.jpg"
+														alt="東京TEMPLAND(トーキョーテンプランド)" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">木曜限定 「お通しの燻製」もう1つサービス!
+													</p>
+													<p class="benefitContents__name">酒と板そば ともしび ～灯～</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/96853.html?tag=5"
+															onclick="ga('send','event','tokuten','click','96853',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2017/12/tomosibi-main_large.jpg"
+														alt="酒と板そば ともしび ～灯～" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+										</ul>
+									</div><!-- 食べるカテゴリ ここまで-->
+
+									<!-- 遊ぶ・泊まるカテゴリ -->
+									<div class="benefitContents benefitContents--play">
+										<h3 class="benefitContents__heading benefitContents__heading--play" id="play">
+											「遊ぶ・泊まる」カテゴリの特典一覧
+										</h3>
+
+										<ul class="benefitContents__list flex--sb">
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">ワイン赤白、1本ずつサービス
+													</p>
+													<p class="benefitContents__name">屋形船すずよし</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/100259.html?tag=5"
+															onclick="ga('send','event','tokuten','click','100259',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2018/05/suzuyoshi-main_large.jpg"
+														alt="屋形船すずよし" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">ドリンク1杯サービス
+													</p>
+													<p class="benefitContents__name">旅館松島</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/96974.html?tag=5"
+															onclick="ga('send','event','tokuten','click','96974',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2017/12/matusima-main_large.jpg"
+														alt="旅館松島" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+										</ul>
+									</div><!-- 遊ぶ・泊まるカテゴリ ここまで-->
+
+									<!-- 買うカテゴリ -->
+									<div class="benefitContents benefitContents--buy">
+										<h3 class="benefitContents__heading benefitContents__heading--buy" id="buy">
+											「買う」カテゴリの特典一覧
+										</h3>
+
+										<ul class="benefitContents__list flex--sb">
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">
+														お買上げ5000円以上でソフトドリンク1杯、1万円以上でアルコール類1杯
+													</p>
+													<p class="benefitContents__name">YOKOHAMA FREEWAY428 元町店</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/108773.html?tag=5"
+															onclick="ga('send','event','tokuten','click','108773',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2019/03/freewaymotomachi-main_large.jpg"
+														alt="YOKOHAMA FREEWAY428 元町店" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">初回限定オーダースーツ20%OFF
+													</p>
+													<p class="benefitContents__name">EVERS SUIT(エバーズスーツ)</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/103158.html?tag=5"
+															onclick="ga('send','event','tokuten','click','103158',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2018/12/evers_large.jpg"
+														alt="EVERS SUIT(エバーズスーツ)" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">オリジナルメガネケース&メガネ拭き
+													</p>
+													<p class="benefitContents__name">メガネのアイガン横浜本店</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/114976.html?tag=5"
+															onclick="ga('send','event','tokuten','click','114976',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2019/09/meganeaigan-main_large.jpg"
+														alt="メガネのアイガン横浜本店" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">服のリフォーム10%オフ!
+													</p>
+													<p class="benefitContents__name">オーダースーツ専門店「ナガサカ」</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/115610.html?tag=5"
+															onclick="ga('send','event','tokuten','click','115610',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2019/10/nagasaka-main_large.jpg"
+														alt="オーダースーツ専門店「ナガサカ」" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">ジュエリーBOXをプレゼント
+													</p>
+													<p class="benefitContents__name">YOKOHAMA JACKET RING</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/114067.html?tag=5"
+															onclick="ga('send','event','tokuten','click','114067',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2019/08/jacketring-main_large.jpg"
+														alt="YOKOHAMA JACKET RING" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+										</ul>
+									</div><!-- 買うカテゴリ ここまで-->
+
+									<!-- 学ぶカテゴリ -->
+									<div class="benefitContents benefitContents--learn">
+										<h3 class="benefitContents__heading benefitContents__heading--learn" id="learn">
+											「学ぶ」カテゴリの特典一覧
+										</h3>
+
+										<ul class="benefitContents__list flex--sb">
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">24時間指定席 初月3000円オフ、自由席 初月1000円オフ
+													</p>
+													<p class="benefitContents__name">横浜有料自習室アイデスク</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/108619.html?tag=5"
+															onclick="ga('send','event','tokuten','click','108619',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2019/03/idesk_large.jpg"
+														alt="横浜有料自習室アイデスク" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">入塾料半額!
+														<p class="benefitContents__name">アカデミックセンター足立塾 寺尾校</p>
+														<p class="benefitContents__btn"><a
+																href="//hamarepo.com/ichioshi/112744.html?tag=5"
+																onclick="ga('send','event','tokuten','click','112744',1,{'nonInteraction':1});">特典をGETする！</a>
+														</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2019/07/academic-main_large.jpg"
+														alt="アカデミックセンター足立塾 寺尾校" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">通常5400円の入会金が半額!
+														<p class="benefitContents__name">AIR Dance Lounge(エアダンスラウンジ)</p>
+														<p class="benefitContents__btn"><a
+																href="//hamarepo.com/ichioshi/106538.html?tag=5"
+																onclick="ga('send','event','tokuten','click','106538',1,{'nonInteraction':1});">特典をGETする！</a>
+														</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2019/02/airdance_large.jpg"
+														alt="AIR Dance Lounge(エアダンスラウンジ)"
+														class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+										</ul>
+									</div><!-- 学ぶカテゴリ ここまで-->
+
+									<!-- 美容カテゴリ -->
+									<div class="benefitContents benefitContents--beauty">
+										<h3 class="benefitContents__heading benefitContents__heading--beauty"
+											id="beauty">「美容」カテゴリの特典一覧
+										</h3>
+
+										<ul class="benefitContents__list flex--sb">
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">ボディ専用シェーバープレゼント!
+													</p>
+													<p class="benefitContents__name">JENNY CLINIC(ジェニークリニック)横浜院</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/108891.html?tag=5"
+															onclick="ga('send','event','tokuten','click','108891',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2019/03/jenny_large.jpg"
+														alt="JENNY CLINIC(ジェニークリニック)横浜院" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">ご新規様限定1000円OFF
+													</p>
+													<p class="benefitContents__name">酵素浴えん 横浜店</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/113134.html?tag=5"
+															onclick="ga('send','event','tokuten','click','113134',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2019/07/kousoyokuen-main_large.jpg"
+														alt="酵素浴えん 横浜店" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">新規のお客様限定 自慢のヘッドスパサービス!
+													</p>
+													<p class="benefitContents__name">GREEN THE BARBER(グリーン・ザ・バーバー)</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/116098.html?tag=5"
+															onclick="ga('send','event','tokuten','click','116098',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2019/10/greenthebarber-main_large.jpg"
+														alt="GREEN THE BARBER(グリーン・ザ・バーバー)"
+														class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+										</ul>
+									</div><!-- 美容カテゴリ ここまで-->
+
+									<!-- 暮らすカテゴリ -->
+									<div class="benefitContents benefitContents--live">
+										<h3 class="benefitContents__heading benefitContents__heading--live" id="live">
+											「暮らす」カテゴリの特典一覧
+										</h3>
+
+										<ul class="benefitContents__list flex--sb">
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">オイル交換無料サービス
+													</p>
+													<p class="benefitContents__name">羽鳥板金塗装工業所</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/115922.html?tag=5"
+															onclick="ga('send','event','tokuten','click','115922',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2019/10/hatori-main_large.jpg"
+														alt="羽鳥板金塗装工業所" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">クリオシティ特製ステッカープレゼント!
+													</p>
+													<p class="benefitContents__name">クリオシティ(Courio-City)</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/95958.html?tag=5"
+															onclick="ga('send','event','tokuten','click','95958',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2017/10/クリオシティ_large.jpg"
+														alt="クリオシティ(Courio-City)" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">ミニカー<br>「NISSAN LEAF TOHO
+														TAXI」プレゼント!
+													</p>
+													<p class="benefitContents__name">東宝タクシー</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/96145.html?tag=5"
+															onclick="ga('send','event','tokuten','click','96145',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2017/11/東宝タクシー_large.jpg"
+														alt="東宝タクシー" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+										</ul>
+									</div><!-- 暮らすカテゴリ ここまで-->
+
+									<!-- 住むカテゴリ -->
+									<div class="benefitContents benefitContents--sumu">
+										<h3 class="benefitContents__heading benefitContents__heading--sumu" id="sumu">
+											「住む」カテゴリの特典一覧
+										</h3>
+
+										<ul class="benefitContents__list flex--sb">
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">ノベルティ(メモ帳)をプレゼント
+													</p>
+													<p class="benefitContents__name">工藤不動産株式会社</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/102984.html?tag=5"
+															onclick="ga('send','event','tokuten','click','102984',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="./image/shop/image_102984.jpg" alt="工藤不動産株式会社"
+														class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">大船住研限定「湯のみ」プレゼント
+													</p>
+													<p class="benefitContents__name">株式会社大船住研</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/101063.html?tag=5"
+															onclick="ga('send','event','tokuten','click','101063',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="./image/shop/image_101063.jpg" alt="株式会社大船住研"
+														class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">採用応募の方、書類先行通過・採用面接確約!
+													</p>
+													<p class="benefitContents__name">株式会社みちのく建設</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/106694.html?tag=5"
+															onclick="ga('send','event','tokuten','click','106694',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2019/03/mitinoku_large.jpg"
+														alt="株式会社みちのく建設" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">仲介手数料半額!
+													</p>
+													<p class="benefitContents__name">株式会社イン・ホームズ</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/110333.html?tag=5"
+															onclick="ga('send','event','tokuten','click','110333',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="./image/shop/image_110333.JPG" alt="株式会社イン・ホームズ"
+														class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">お見積り依頼された方にクオカード500円分プレゼント!
+													</p>
+													<p class="benefitContents__name">株式会社ダイレクトハウス</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/94847.html?tag=5"
+															onclick="ga('send','event','tokuten','click','94847',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="./image/shop/image_94847.jpg" alt="株式会社ダイレクトハウス"
+														class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+										</ul>
+									</div><!-- 住むカテゴリ ここまで-->
+
+									<!-- 病院カテゴリ -->
+									<!-- <div class="benefitContents benefitContents--hospital">
+										<h3 class="benefitContents__heading benefitContents__heading--hospital" id="hospital">「病院」カテゴリの特典一覧
+										</h3>
+
+										<ul class="benefitContents__list flex--sb">
+
+										</ul>
+									</div>病院カテゴリ ここまで -->
+
+									<!-- 相談カテゴリ -->
+									<div class="benefitContents benefitContents--consult">
+										<h3 class="benefitContents__heading benefitContents__heading--consult"
+											id="consult">「相談」カテゴリの特典一覧
+										</h3>
+
+										<ul class="benefitContents__list flex--sb">
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">初月会費無料!
+													</p>
+													<p class="benefitContents__name">株式会社シーネット 結婚相談所部</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/103253.html?tag=5"
+															onclick="ga('send','event','tokuten','click','103253',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2018/12/cnet-main_large03.jpg"
+														alt="株式会社シーネット 結婚相談所部" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">初回限定「1時間無料相談」サービス
+													</p>
+													<p class="benefitContents__name">よこはま都市未来研究所</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/99680.html?tag=5"
+															onclick="ga('send','event','tokuten','click','99680',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2018/03/よこはま都市未来研究所.jpg"
+														alt="よこはま都市未来研究所" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+										</ul>
+									</div><!-- 相談カテゴリ ここまで-->
+
+									<!-- 健康カテゴリ -->
+									<div class="benefitContents benefitContents--health">
+										<h3 class="benefitContents__heading benefitContents__heading--health"
+											id="health">「健康」カテゴリの特典一覧
+										</h3>
+
+										<ul class="benefitContents__list flex--sb">
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">初見料無料!
+													</p>
+													<p class="benefitContents__name">カイロプラクティック テミス 鶴ヶ峰整体院</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/102533.html?tag=5"
+															onclick="ga('send','event','tokuten','click','102533',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2018/10/themis19-main_large.jpg"
+														alt="カイロプラクティック テミス 鶴ヶ峰整体院" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">全身施術半額!
+													</p>
+													<p class="benefitContents__name">Mahã(マハー)</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/103910.html?tag=5"
+															onclick="ga('send','event','tokuten','click','103910',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2019/01/maha_large.jpg"
+														alt="Mahã(マハー)" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">初回申し込みの方限定「癒しのメッセージ」「気功ヒーリング」無料
+													</p>
+													<p class="benefitContents__name">なごみ空間</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/108033.html?tag=5"
+															onclick="ga('send','event','tokuten','click','108033',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2019/03/wiak-main_large.jpg"
+														alt="なごみ空間" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">「内臓あたため+STSの体験」セットが5000円(税別)に!
+													</p>
+													<p class="benefitContents__name">JPケンコープラザ</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/114257.html?tag=5"
+															onclick="ga('send','event','tokuten','click','114257',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2019/08/jphealth-main_large1.jpg"
+														alt="JPケンコープラザ" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+
+											<!-- 1アイテム分 -->
+											<li class="benefitContents__item">
+												<div class="benefitContents__text">
+													<p class="benefitContents__detail">入学金6000円と初月受講料が無料に!
+													</p>
+													<p class="benefitContents__name">松原テニスクラブ横浜</p>
+													<p class="benefitContents__btn"><a
+															href="//hamarepo.com/ichioshi/101942.html?tag=5"
+															onclick="ga('send','event','tokuten','click','101942',1,{'nonInteraction':1});">特典をGETする！</a>
+													</p>
+												</div>
+												<div class="benefitContents__image">
+													<img src="//hamarepo.com/wp-content/uploads/2018/09/mtennis-main_large.jpg"
+														alt="松原テニスクラブ横浜" class="benefitContents__image">
+												</div>
+											</li><!-- 1アイテム分 ここまで -->
+										</ul>
+									</div><!-- 健康カテゴリ ここまで-->
+
+								</div><!-- .main-content ここまで-->
+
+								<!-- 特典の使い方 -->
+								<div id="benefitHowto" class="benefitHowto">
+									<h2 class="benefitHowto__heading"><i class="fas fa-info-circle"></i>イチオシ特典の使い方
+									</h2>
+									<ul class="benefitHowto__list">
+										<li class="benefitHowto__item">
+											<p class="benefitHowto__desc">
+												特典一覧から欲しい特典を選んで「特典をGETする！」をタップ！
+											</p>
+											<img src="" alt="" class="benefitHowto__image">
+										</li>
+										<li class="benefitHowto__item">
+											<p class="benefitHowto__desc">
+												特典ページが表示されます。<br>
+												※開いたページに特典がなく、地図だけが表示されている場合は特典配布が終了しております。
+											</p>
+											<img src="" alt="" class="benefitHowto__image">
+										</li>
+										<li class="benefitHowto__item">
+											<p class="benefitHowto__desc">
+												特典の利用期限、利用条件、提示条件をご確認の上、特典をご使用ください。
+											</p>
+											<img src="" alt="" class="benefitHowto__image">
+										</li>
+									</ul>
+								</div>
+
+
+								<p id="pageTop" class="pagetop"><a href="#top"></a></p>
+
+
+								<script>
+									$(function () {
+										var pagetop = $('.pagetop');
+										$(window).scroll(function () {
+											if ($(this).scrollTop() > 200) {
+												pagetop.fadeIn();
+											} else {
+												pagetop.fadeOut();
+											}
+										});
+										pagetop.click(function () {
+											$('body, html').animate({ scrollTop: 0 }, 500);
+											return false;
+										});
+									});
+								</script>
+								<script>
+									$(function () {
+										$('a[href^="#"]').click(function () {
+											var speed = 500;
+											var href = $(this).attr("href");
+											var target = $(href == "#" || href == "" ? 'html' : href);
+											var position = target.offset().top - 50;
+											$("html, body").animate({ scrollTop: position }, speed, "swing");
+											return false;
+										});
+									});
+								</script>
+							</div>
+						</div><!-- contents -->
+					</main>
+					<!-- メインコンテンツ　ここまで -->
+				</div><!-- main_wrap -->
+			</div><!-- #division -->
+		</div><!-- #wrapper -->
+
+		<footer>
+			<div class="footer_wrap">
+				<div class="footer-sns clearfix">
+					<a href="https://www.facebook.com/hamarepocom/"><img
+							src="https://hamarepo.com/img_2017/icon-facebook.png" alt="Facebook"></a>
+					<a href="https://twitter.com/hamarepo"><img src="https://hamarepo.com/img_2017/icon-twitter.png"
+							alt="Twitter"></a>
+					<a href="https://www.instagram.com/hamarepo/"><img
+							src="https://hamarepo.com/img_2017/icon-instagram.png" alt="Instagram"></a>
+					<a href="https://www.youtube.com/channel/UCPLAXvs6Q7YXVz-boyjqoXA"><img
+							src="https://hamarepo.com/img_2017/icon-youtube.png" alt="YouTube"></a>
+				</div>
+				<div class="footer_menu">
+					<ul class="clearfix">
+						<li><a href="https://hamarepo.com/company.php">運営会社</a></li>
+						<li><a href="https://hamarepo.com/siterule.php">サイト規約</a></li>
+						<li><a href="https://hamarepo.com/privacy.php">プライバシーポリシー</a></li>
+					</ul>
+					<ul>
+						<li><a href="https://hamarepo.com/contact.php">お問い合わせ</a></li>
+					</ul>
+				</div>
+				<small>Copyright &copy; 2010 はまれぽ.com All Rights Reserved.</small>
+			</div>
+		</footer>
+		<script src="https://hamarepo.com/js_2017/iscroll.js"></script>
+		<script src="https://hamarepo.com/js_2017/drawer.js"></script>
+		<script src="https://hamarepo.com/js_2017/jquery.bxslider.min.js"></script>
+		<script src="https://hamarepo.com/js_2017/jquery.matchHeight-min.js"></script>
+		<script src="https://hamarepo.com/js_2017/jquery-option.js"></script>
+		<script src="https://hamarepo.com/js_2017/jquery-option_sp.js"></script>
+	</div>
+</body>
+
+</html>
