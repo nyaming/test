@@ -58,16 +58,16 @@ body {
   display: flex;
   flex-wrap: wrap;
   &--sa {
-    @extend .flex;
     justify-content: space-around;
   }
   &--sb {
-    @extend .flex;
     justify-content: space-between;
   }
   &--center {
-    @extend .flex;
     justify-content: center;
+  }
+  &--c-center {
+    align-items: center;
   }
 }
 /* font awesome */
@@ -118,10 +118,6 @@ body {
         padding: 10px 12px;
         
         // letter-spacing: 0.2em;
-      }
-
-      &:hover {
-        // opacity: inherit !important;
       }
 
     }
@@ -382,13 +378,64 @@ body {
   }
 }
 
+
+/* 特典の使い方 */
 .benefitHowto {
+  background-color: #fff;
+
   &__heading {
     @include heading;
     background-color: $color-gray;
     color: $color-benefit;
-
+    
   }
+  &__list {
+    width: 85%;
+    margin: 0 auto;
+    padding: 30px 0 20px;
+  }
+  &__item {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid darken($color-gray, 20%);
+    margin-bottom: 60px;
+    position: relative;
+
+    &:not(:nth-child(3))::after {
+      font-family: "Font Awesome 5 Free";
+      content: "\f0d7";
+      display: inline-block;
+      font-weight: 900;
+      font-size: 60px;
+      position: absolute;
+      left: 50%;
+      bottom: -75px;
+      transform: translateX(-50%);
+      color: $color-benefit;
+    }
+    
+    &:last-of-type {
+      & .benefitHowto__icon {
+        width: 20%;
+      } 
+      p {
+        width: 75%;
+      }
+    }
+  }
+  
+  &__desc {
+    font-size: 16px;
+    font-weight: bold;
+
+    &__note {
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 1PX !important;
+    }
+  }
+
+
 }
 
 

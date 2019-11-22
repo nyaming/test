@@ -52,7 +52,7 @@ body {
 }
 
 /* flex */
-.flex, .flex--sa, .flex--sb, .flex--center {
+.flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,6 +75,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.flex--c-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* font awesome */
@@ -427,6 +433,11 @@ body {
   }
 }
 
+/* 特典の使い方 */
+.benefitHowto {
+  background-color: #fff;
+}
+
 .benefitHowto__heading {
   background-color: #ce003d;
   margin-bottom: 0 !important;
@@ -437,6 +448,53 @@ body {
   font-size: 18px;
   background-color: #a5a5a5;
   color: #ce003d;
+}
+
+.benefitHowto__list {
+  width: 85%;
+  margin: 0 auto;
+  padding: 30px 0 20px;
+}
+
+.benefitHowto__item {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #727272;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.benefitHowto__item:not(:nth-child(3))::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0d7";
+  display: inline-block;
+  font-weight: 900;
+  font-size: 60px;
+  position: absolute;
+  left: 50%;
+  bottom: -75px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #ce003d;
+}
+
+.benefitHowto__item:last-of-type .benefitHowto__icon {
+  width: 20%;
+}
+
+.benefitHowto__item:last-of-type p {
+  width: 75%;
+}
+
+.benefitHowto__desc {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.benefitHowto__desc__note {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1PX !important;
 }
 
 /* ページトップ */
