@@ -56,6 +56,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.flex--wp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -229,6 +235,7 @@ body {
 /* 特典一覧 */
 .benefitContents {
   padding: 20px 0;
+  /* もっと見るボタン */
 }
 
 @media screen and (min-width: 1000px) {
@@ -433,6 +440,93 @@ body {
   }
 }
 
+.benefitContents__link {
+  text-align: center;
+  margin: 20px 0 20px;
+}
+
+@media screen and (min-width: 481px) {
+  .benefitContents__link {
+    margin-top: 30px;
+  }
+}
+
+.benefitContents__link a {
+  display: inline-block;
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 25px;
+  border: 2px solid transparent;
+  font-weight: bold;
+  font-size: 14px;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
+@media screen and (min-width: 481px) {
+  .benefitContents__link a {
+    font-size: 16px;
+  }
+}
+
+.benefitContents__link a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 1.0 !important;
+}
+
+.benefitContents--eat .benefitContents__link a {
+  border-color: #FD9809;
+  color: #FD9809;
+}
+
+.benefitContents--play .benefitContents__link a {
+  border-color: #67C9D5;
+  color: #67C9D5;
+}
+
+.benefitContents--buy .benefitContents__link a {
+  border-color: #FC7068;
+  color: #FC7068;
+}
+
+.benefitContents--learn .benefitContents__link a {
+  border-color: #EE87B4;
+  color: #EE87B4;
+}
+
+.benefitContents--beauty .benefitContents__link a {
+  border-color: #BA79CE;
+  color: #BA79CE;
+}
+
+.benefitContents--live .benefitContents__link a {
+  border-color: #9A8EE0;
+  color: #9A8EE0;
+}
+
+.benefitContents--sumu .benefitContents__link a {
+  border-color: #A7CD3D;
+  color: #A7CD3D;
+}
+
+.benefitContents--hospital .benefitContents__link a {
+  border-color: #67D5A6;
+  color: #67D5A6;
+}
+
+.benefitContents--consult .benefitContents__link a {
+  border-color: #4B66D0;
+  color: #4B66D0;
+}
+
+.benefitContents--health .benefitContents__link a {
+  border-color: #FC613A;
+  color: #FC613A;
+}
+
 /* 特典の使い方 */
 .benefitHowto {
   background-color: #fff;
@@ -450,8 +544,14 @@ body {
   color: #ce003d;
 }
 
+@media screen and (min-width: 481px) {
+  .benefitHowto__heading {
+    font-size: 22px;
+  }
+}
+
 .benefitHowto__list {
-  width: 85%;
+  width: 80%;
   margin: 0 auto;
   padding: 30px 0 20px;
 }
@@ -462,6 +562,12 @@ body {
   border: 2px solid #727272;
   margin-bottom: 60px;
   position: relative;
+}
+
+@media screen and (min-width: 481px) {
+  .benefitHowto__item {
+    padding: 20px;
+  }
 }
 
 .benefitHowto__item:not(:nth-child(3))::after {
@@ -480,10 +586,19 @@ body {
 
 .benefitHowto__item:last-of-type .benefitHowto__icon {
   width: 20%;
+  max-width: 50px;
+  margin-right: 10px;
 }
 
-.benefitHowto__item:last-of-type p {
-  width: 75%;
+@media screen and (min-width: 1000px) {
+  .benefitHowto__item:last-of-type .benefitHowto__icon {
+    max-width: 80px;
+    margin-right: 30px;
+  }
+}
+
+.benefitHowto__item:last-of-type .benefitHowto__desc {
+  width: 80%;
 }
 
 .benefitHowto__desc {
@@ -491,10 +606,61 @@ body {
   font-weight: bold;
 }
 
+@media screen and (min-width: 481px) {
+  .benefitHowto__desc {
+    font-size: 22px;
+  }
+}
+
 .benefitHowto__desc__note {
   font-size: 12px;
   font-weight: normal;
   line-height: 1PX !important;
+}
+
+@media screen and (min-width: 481px) {
+  .benefitHowto__desc__note {
+    font-size: 16px;
+  }
+}
+
+.benefitHowto__image {
+  display: block;
+}
+
+@media screen and (min-width: 481px) {
+  .benefitHowto__image {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+/* SNS */
+.sns {
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 40px 0;
+  color: #595959;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sns__list a {
+  display: block;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.sns__list a img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.sns__item {
+  width: 68px;
+  margin: 0 2px;
 }
 
 /* ページトップ */
@@ -505,7 +671,7 @@ body {
   position: fixed;
   right: 15px;
   bottom: 10px;
-  background: #000;
+  background: #ce003d;
   opacity: 0.6;
 }
 

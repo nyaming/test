@@ -6,6 +6,10 @@
     text-align: center;
     color: #fff;
     font-size: 18px;
+
+    @include mq() {
+        font-size: 22px;
+      }
 }
 
 @mixin heading--category {
